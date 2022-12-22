@@ -20,6 +20,7 @@
   <body>
     <div class="main">
       <div class="left">
+        <p class="title sm-dev">Simone Olivia</p>
         <div class="top">
           <div class="img-container">
             <img src="assets/img/about.jpg" alt="about" />
@@ -50,6 +51,7 @@
           <a href="#" class="social-link github"
             ><i class="fa-brands fa-github"></i
           ></a>
+          <i class="fa-solid fa-bars fa-xl sm-dev nav-toggle"></i>
         </div>
       </div>
       <div class="right">
@@ -562,5 +564,22 @@
       <!-- Close right  -->
     </div>
     <!-- Close main -->
+
+    <script>
+      const navItems = document.querySelector(".nav__items");
+      const navToggle = document.querySelector(".nav-toggle");
+      let clickCount = 0;
+      navToggle.addEventListener("click", () => {
+        navItems.classList.toggle("show__nav__items");
+        if (clickCount % 2 === 0) {
+          navToggle.classList.remove("fa-bars");
+          navToggle.classList.add("fa-xmark");
+        } else {
+          navToggle.classList.add("fa-bars");
+          navToggle.classList.remove("fa-xmark");
+        }
+        clickCount++;
+      });
+    </script>
   </body>
 </html>
