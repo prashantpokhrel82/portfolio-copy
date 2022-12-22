@@ -15,6 +15,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!--==================== Script JS ====================-->
+    <script defer src="./assets/js/script.js"></script>
+
     <title>Responsive Portfolio Website</title>
   </head>
   <body>
@@ -56,6 +59,29 @@
       </div>
       <div class="right">
         <!-- ================Header Section================== -->
+        <div class="teal">
+          <a class="color-gear">
+            <i class="fa-solid fa-gear fa-lg"></i>
+          </a>
+          <div class="color-pallet">
+            <h3>Color Switcher</h3>
+            <div class="colors">
+              <a class="color color-purple"></a>
+              <a class="color color-blue"></a>
+              <a class="color color-purple2"></a>
+              <a class="color color-aquamarine"></a>
+              <a class="color color-red"></a>
+              <a class="color color-pink"></a>
+              <a class="color color-green"></a>
+              <a class="color color-yellow"></a>
+              <a class="color color-orange"></a>
+              <a class="color color-brown"></a>
+            </div>
+            <a class="reset-btn" onclick="changeToDefaultColor()"
+              >Reset Default Teal</a
+            >
+          </div>
+        </div>
 
         <header id="header" class="header">
           <div class="header__content">
@@ -564,22 +590,5 @@
       <!-- Close right  -->
     </div>
     <!-- Close main -->
-
-    <script>
-      const navItems = document.querySelector(".nav__items");
-      const navToggle = document.querySelector(".nav-toggle");
-      let clickCount = 0;
-      navToggle.addEventListener("click", () => {
-        navItems.classList.toggle("show__nav__items");
-        if (clickCount % 2 === 0) {
-          navToggle.classList.remove("fa-bars");
-          navToggle.classList.add("fa-xmark");
-        } else {
-          navToggle.classList.add("fa-bars");
-          navToggle.classList.remove("fa-xmark");
-        }
-        clickCount++;
-      });
-    </script>
   </body>
 </html>
